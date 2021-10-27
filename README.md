@@ -1,1 +1,3 @@
-# xqueue
+# xQueue
+
+Mensageria inteligente

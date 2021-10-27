@@ -1,0 +1,13 @@
+[run]
+source = .
+omit = **/migrations/*.py, **/test*.py, **/tests/, **/__init__.py, .venv/**, app/**, manage.py
+
+[report]
+show_missing = true
+sort = -cover
+skip_covered = true
+
+[html]
+
+[xml]
+output = build/coverage.xml
