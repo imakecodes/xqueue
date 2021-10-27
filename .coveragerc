@@ -1,6 +1,6 @@
 [run]
-source = .
-omit = **/migrations/*.py, **/test*.py, **/tests/, **/__init__.py, .venv/**, app/**, manage.py
+source = app
+omit = **/migrations/*.py, **/test*.py, **/tests/, **/__init__.py
 
 [report]
 show_missing = true

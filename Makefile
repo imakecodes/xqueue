@@ -10,7 +10,7 @@ help:
 	@echo "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
 
 local-run:
-	@uvicorn main:app --reload
+	@uvicorn app.main:app --reload
 
 dev-setup:
 	@pip install -r requirements.txt
