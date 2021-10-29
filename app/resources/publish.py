@@ -1,7 +1,7 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Body
 
 from app.schemas.response import CommonMessageResponseSchema
-from app.tasks.publish import publish_message
+from app.tasks import publish_message
 
 api_router = APIRouter()
 
@@ -15,12 +15,11 @@ api_router = APIRouter()
     description="Receives the message and saves on queue service",
     response_description="Response message",
 )
-def publish_post(project: str, queue: str) -> dict:
+def publish_post(project: str, queue: str, body: dict = Body(...)) -> dict:
     """
     Receives the GET request that will be proxyed to subscribers
     """
 
     queue = f"{project}-{queue}"
-    publish_message.s(queue_name="test_queue").apply_async(queue=queue)
-
+    publish_message.s(project, queue, body).apply_async(queue=queue)
     return {"msg": "Received"}
