@@ -6,7 +6,7 @@ api_router = APIRouter()
 
 
 @api_router.post(
-    "/",
+    "",
     response_model=CommonMessageResponseSchema,
     status_code=200,
     tags=["publish"],
