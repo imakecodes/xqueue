@@ -8,6 +8,6 @@ client = TestClient(app)
 
 
 def test_post_message():
-    response = client.post("/publish/")
+    response = client.post("/publish")
     assert response.status_code == HTTPStatus.OK
     assert response.json() == {"msg": "Received"}
