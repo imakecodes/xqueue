@@ -1,5 +1,6 @@
 fastapi~=0.70
 pendulum~=2.1
-requests~=2.26
+requests
 uvicorn~=0.15
 celery
+psutil
