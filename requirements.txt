@@ -4,3 +4,4 @@ requests
 uvicorn~=0.15
 celery
 psutil
+sqlalchemy
